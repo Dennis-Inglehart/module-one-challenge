@@ -21,13 +21,13 @@ body {
 }
 
 .seo {
-    color: #d9dcd6;
+    color: #d9dcd6; /*In the <h1> "HORISEON", the "SEO" is supposed to be this color*/
 }
 
-/* TODO: extend the background of the list across the whole width of the browser
+/* TODO: for sized-down windows, extend the background of the list across the whole width of the browser
     If the browser window is resized narrowly enough, the unordered list pops down onto the image, and looks ugly.
     (without the header background, the white text is hard to read).
-    The 'box-sizing' and 'background-color' properties make the effect less ugly, but it's not an ideal solution*/
+    The 'box-sizing' and 'background-color' properties here make the effect less ugly, but it's not an ideal solution*/
 .header ul {
     list-style-type: none;
     box-sizing: border-box;
@@ -49,7 +49,7 @@ a {
 }
 
 p {
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .hero {
@@ -61,21 +61,15 @@ p {
     background-position: center;
 }
 
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
 .content {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
+
+/* Below the header and banner image, the layout if defined by the "benefits" box
+    The "benefits" box content takes up the right 20% of the window, and has a contiguous background
+    The remaining 80% of the window, on the left, are "service"s, which have discontiguous backgrounds*/
 
 .benefits {
     margin-right: 20px;
@@ -104,7 +98,7 @@ p {
     max-width: 150px;
 }
 
-.left-panel-item {
+.service {
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
@@ -113,21 +107,13 @@ p {
     color: #ffffff;
 }
 
-.left-panel-item img {
+.service img {
     max-height: 200px;
+    float: left;
+    margin-right: 25px;
 }
 
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
+.service h2 {
     margin-bottom: 20px;
     font-size: 36px;
 }
