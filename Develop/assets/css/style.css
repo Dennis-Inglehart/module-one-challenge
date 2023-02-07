@@ -28,6 +28,7 @@ body {
     If the browser window is resized narrowly enough, the unordered list pops down onto the image, and looks ugly.
     (without the header background, the white text is hard to read).
     The 'box-sizing' and 'background-color' properties here make the effect less ugly, but it's not an ideal solution*/
+
 .header ul {
     list-style-type: none;
     box-sizing: border-box;
@@ -52,6 +53,8 @@ p {
     font-size: 20px;
 }
 
+/* banner image, just below the header, above the content */
+
 .hero {
     height: 800px;
     width: 100%;
@@ -61,17 +64,19 @@ p {
     background-position: center;
 }
 
+/*  Below the header and banner image, the layout if defined by the "benefit-mothership" box
+    The "benefit-mothership" box content takes up the right 20% of the window, and has a contiguous background
+    The remaining 80% of the window, on the left, are "service"s, which have discontiguous backgrounds*/
+
 .content {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
 
-/* Below the header and banner image, the layout if defined by the "benefits" box
-    The "benefits" box content takes up the right 20% of the window, and has a contiguous background
-    The remaining 80% of the window, on the left, are "service"s, which have discontiguous backgrounds*/
+/* benefit-mothership (on the right)*/
 
-.benefits {
+.benefit-mothership {
     margin-right: 20px;
     padding: 20px;
     clear: both;
@@ -81,6 +86,8 @@ p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
 }
+
+/* individual benefit boxes (inside benefit-mothership) */
 
 .benefit {
     margin-bottom: 32px;
@@ -97,6 +104,8 @@ p {
     margin: 10px auto;
     max-width: 150px;
 }
+
+/* service boxes (on the left) */
 
 .service {
     margin-bottom: 20px;
